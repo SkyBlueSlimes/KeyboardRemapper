@@ -98,6 +98,15 @@ class KeyboardRemapper
         keyMap["8"] = 0x38;
         keyMap["9"] = 0x39;
         keyMap["0"] = 0x30;
+        keyMap["-"] = 0xBD;
+        keyMap["="] = 0xBB;
+        keyMap["["] = 0xDB;
+        keyMap["]"] = 0xDD;
+        keyMap["\\"] = 0xDC;
+        keyMap[";"] = 0xBA;
+        keyMap[","] = 0xBC;
+        keyMap["."] = 0xBE;
+        keyMap["/"] = 0xBF;
         foreach (var kvp in keyMap)
         {
             reverseKeyMap[kvp.Value] = kvp.Key;
