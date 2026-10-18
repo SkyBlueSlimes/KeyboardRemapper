@@ -187,17 +187,18 @@ class KeyboardRemapper
         do
         {
             Console.WriteLine("Enter your chosen toggle key:");
-            string toggleInput = Console.ReadLine();
+            string toggleInput = Console.ReadLine().ToUpperInvariant();
             if (keyMap.ContainsKey(toggleInput) && toggleInput != "SHIFT" && toggleInput != "CTRL")
             {
                 toggleKey = toggleInput;
+                break;
             }
             else
             {
                 Console.WriteLine("Invalid key. Please enter a valid key.");
             }
 
-        } while (toggleKey == null);
+        } while (true);
     }
     private static void AddKeyRemappings()
     {
